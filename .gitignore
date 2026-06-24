@@ -1,0 +1,13 @@
+# Node
+node_modules/
+packages/ts/dist/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+packages/py/*.egg-info/
+
+# Env
+.env
+.env.testdata

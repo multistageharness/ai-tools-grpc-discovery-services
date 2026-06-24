@@ -1,0 +1,23 @@
+{
+  "name": "grpc-discovery-ts",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "TypeScript gRPC DiscoveryService server + client (dynamic .proto loading).",
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "server": "tsx src/server.ts",
+    "discover": "tsx src/discover.ts",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@grpc/grpc-js": "1.12.6",
+    "@grpc/proto-loader": "0.7.13"
+  },
+  "devDependencies": {
+    "tsx": "4.19.2",
+    "typescript": "5.7.3",
+    "@types/node": "22.10.5"
+  }
+}

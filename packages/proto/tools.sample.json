@@ -1,0 +1,17 @@
+[
+  {
+    "name": "echo",
+    "description": "Echoes back the provided message verbatim.",
+    "input_schema": "{\"type\":\"object\",\"properties\":{\"message\":{\"type\":\"string\"}},\"required\":[\"message\"]}"
+  },
+  {
+    "name": "add",
+    "description": "Adds two numbers and returns the sum.",
+    "input_schema": "{\"type\":\"object\",\"properties\":{\"a\":{\"type\":\"number\"},\"b\":{\"type\":\"number\"}},\"required\":[\"a\",\"b\"]}"
+  },
+  {
+    "name": "get_time",
+    "description": "Returns the current server time in ISO 8601.",
+    "input_schema": "{\"type\":\"object\",\"properties\":{}}"
+  }
+]

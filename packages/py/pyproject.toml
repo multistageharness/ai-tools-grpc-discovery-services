@@ -1,0 +1,16 @@
+[project]
+name = "grpc-discovery-py"
+version = "1.0.0"
+description = "Python gRPC DiscoveryService server + client (dynamic .proto loading)."
+requires-python = ">=3.11"
+dependencies = [
+  # grpcio-tools is required for grpc.protos()/grpc.services() runtime loading.
+  "grpcio==1.71.0",
+  "grpcio-tools==1.71.0",
+]
+
+[project.scripts]
+grpc-discovery-py = "main:main"
+
+[tool.setuptools]
+py-modules = ["main", "server", "discover", "proto"]

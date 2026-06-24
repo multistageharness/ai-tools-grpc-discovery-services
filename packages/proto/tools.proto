@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package api;
+
+// A minimal "discoverability" service: a client asks the server which tools
+// it exposes (MCP-style), and the server answers with a list of tool
+// descriptors. Because gRPC enforces a strict contract, every client below
+// (mjs / ts / py) loads THIS file at runtime to learn the wire shape.
+service DiscoveryService {
+  // The method we want to call to get our tools.
+  rpc GetAvailableTools (EmptyRequest) returns (ToolListResponse);
+}
+
+message EmptyRequest {}
+
+message Tool {
+  string name = 1;
+  string description = 2;
+  // JSON Schema describing the tool's arguments (MCP `inputSchema`),
+  // carried as a string so the contract stays transport-agnostic.
+  string input_schema = 3;
+}
+
+message ToolListResponse {
+  repeated Tool tools = 1;
+}
